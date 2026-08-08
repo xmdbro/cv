@@ -19,6 +19,7 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
+\usepackage[hidelinks]{hyperref}
 
 
 %----------FONT OPTIONS----------
@@ -112,7 +113,7 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Kristopher Lance A. Chiu} \\ \vspace{1pt}
+    \textbf{\Huge Kristopher Lance A. Chiu} \\ \vspace{1pt}
     \small +63 966 3648 452 $|$ \href{mailto:x@x.com}{\underline{kristopher\_chiu@dlsu.edu.ph}} $|$ 
     \href{https://linkedin.com/in/...}{\underline{https://www.linkedin.com/in/kl-chiu/}} $|$
     \href{https://github.com/...}{\underline{github.com/xmdbro}}
@@ -144,21 +145,21 @@
 %-------------------------------------------
 
     \resumeSubheading
-      {Associate Backend Engineer \& Assistant Vice President}{Oct 2024 -- Present}
+      {Associate Backend Engineer \& Assistant Vice President}{Oct. 2024 -- Present}
       {La Salle Computer Society}{DLSU}
       \resumeItemListStart
         \resumeItem{Contributed to the development of a university-wide website by assisting in backend API implementation and database design.}
         \resumeItem{Prepared digital materials and presentations for an organisation-wide event.}
       \resumeItemListEnd
 
-    \resumeSubheading
-      {Administrative Assistant}{Jan. 2024 -- Feb. 2024}
-      {Bureau of Soils and Water Management}{Quezon City, Metro Manila}
-      \resumeItemListStart
-        \resumeItem{Organised and digitised administrative records, ensuring accuracy and efficiency in retrieval of documents.}
-        \resumeItem{Assisted in drafting and formatting official correspondence, memos, reports, etc.}
-        \resumeItem{Worked on coordinating scheduling of meetings and maintained office calendar to keep work efficient.}
-    \resumeItemListEnd
+    % \resumeSubheading
+    %   {Administrative Assistant}{Jan. 2024 -- Feb. 2024}
+    %   {Bureau of Soils and Water Management}{Quezon City, Metro Manila}
+    %   \resumeItemListStart
+    %     \resumeItem{Organised and digitised administrative records, ensuring accuracy and efficiency in retrieval of documents.}
+    %     \resumeItem{Assisted in drafting and formatting official correspondence, memos, reports, etc.}
+    %     \resumeItem{Worked on coordinating scheduling of meetings and maintained office calendar to keep work efficient.}
+    % \resumeItemListEnd
 
     \resumeSubheading
       {IT Tech Intern}{Oct. 2023 -- Dec. 2023}
@@ -176,23 +177,38 @@
 %-----------PROJECTS-----------
 \section{Projects}
     \resumeSubHeadingListStart
+      % \resumeProjectHeading
+      %     {\textbf{Reliable Data Transfer over UDP} $|$ \emph{Python}}{Feb. 2026}
+      %     \resumeItemListStart
+      %       \resumeItem{Developed an application-layer file transfer protocol using Stop-and-Wait ARQ over UDP to support reliable file uploads (PUT) and downloads (GET) using Python.}
+      %       \resumeItem{Engineered custom connection handshakes, packet encoding/decoding, and a packet-loss simulation mode to rigorously test timeout and automatic retransmission paths.}
+      %     \resumeItemListEnd
+      % \resumeProjectHeading
+      %     {\textbf{RFC PokeProtocol} $|$ \emph{Java, UDP}}{Dec. 2025}
+      %     \resumeItemListStart
+      %       \resumeItem{Engineered a custom reliable data transfer protocol over UDP using Java, implementing a three-way handshake, ACK/NACK sequencing, and automatic packet retransmission.}
+      %       \resumeItem{Developed a networked multiplayer Pokémon battle system featuring real-time synchronization, live chat, and a spectator mode.}
+      %     \resumeItemListEnd
+
       \resumeProjectHeading
-          {\textbf{Reliable Data Transfer over UDP} $|$ \emph{Python}}{Feb. 2026}
+          {\textbf{\href{https://github.com/rdgonzaga/resole}{Resole}} $|$ \emph{Next.js, React Native, TypeScript, Tailwind, Supabase, PostgreSQL}}{Aug. 2026}
           \resumeItemListStart
-            \resumeItem{Developed an application-layer file transfer protocol using Stop-and-Wait ARQ over UDP to support reliable file uploads (PUT) and downloads (GET) using Python.}
-            \resumeItem{Engineered custom connection handshakes, packet encoding/decoding, and a packet-loss simulation mode to rigorously test timeout and automatic retransmission paths.}
+            \resumeItem{Built a full-stack circular commerce marketplace for premium sneakers, utilizing a feature-driven monorepo architecture for seamless integration between a Next.js web application and a React Native mobile app.}
+            \resumeItem{Developed a scalable backend using PostgreSQL and Drizzle ORM on Supabase, featuring automated data scraping via Puppeteer and AI-powered condition scoring with Google GenAI.}
           \resumeItemListEnd
+
       \resumeProjectHeading
-          {\textbf{RFC PokeProtocol} $|$ \emph{Java, UDP}}{Dec. 2025}
+          {\textbf{\href{https://github.com/rdgonzaga/vibe-coded-website-fuzzer}{Vibe-Coded Website Fuzzer}} $|$ \emph{Express.js, Typescript, Redis, Kubernetes}}{July 2026}
           \resumeItemListStart
-            \resumeItem{Engineered a custom reliable data transfer protocol over UDP using Java, implementing a three-way handshake, ACK/NACK sequencing, and automatic packet retransmission.}
-            \resumeItem{Developed a networked multiplayer Pokémon battle system featuring real-time synchronization, live chat, and a spectator mode.}
+            \resumeItem{Built a Dynamic Application Security Testing (DAST) fuzzer in Python to automate vulnerability discovery (IDOR, JWT bypasses, and rate-limiting flaws) in AI-generated web applications.}
+            \resumeItem{Integrated a native CVSS v3.1 scoring engine to evaluate findings and generate comprehensive, styled vulnerability risk reports.}
           \resumeItemListEnd
+
       \resumeProjectHeading
-          {\textbf{LEAP 2025 Registration System} $|$ \emph{Express.js, Typescript, Redis, Kubernetes}}{May 2025}
+          {\textbf{\href{https://github.com/dlsu-lscs/leap25-backend}{Leap 2025 Registration System}} $|$ \emph{Express.js, Typescript, Redis, Kubernetes}}{May 2025}
           \resumeItemListStart
-            \resumeItem{High-traffic event registration platform engineered for reliability under extreme concurrency.}
-            \resumeItem{30,000+ concurrent users and 99.9\% uptime.}
+            \resumeItem{Built a high-traffic event registration platform engineered for reliability under extreme concurrency.}
+            \resumeItem{At it's peak, the system supported 30,000+ concurrent users and 99.9\% uptime.}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
