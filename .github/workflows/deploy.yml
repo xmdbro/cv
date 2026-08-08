@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - 'README.md' # Ignores changes to README.md
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
