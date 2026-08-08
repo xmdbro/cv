@@ -1,0 +1,35 @@
+name: Build and Deploy PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md' # Ignores changes to README.md
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Compile LaTeX document
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
+          compiler: latexmk
+
+      - name: Prepare files for deployment
+        run: |
+          mkdir deploy_folder
+          cp resume.pdf deploy_folder/
+          cp index.html deploy_folder/
+          cp CNAME deploy_folder/
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy_folder
+          publish_branch: build
