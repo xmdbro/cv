@@ -1,4 +1,4 @@
-name: Build and Deploy PDF
+name: Build and Publish PDF
 
 on:
   push:
@@ -7,8 +7,13 @@ on:
     paths-ignore:
       - 'README.md'
       - '.gitignore'
-      - '.github/workflows/deploy.yml'
-  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-pdf-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
@@ -28,9 +33,8 @@ jobs:
           mkdir deploy_folder
           cp resume.pdf deploy_folder/
           cp index.html deploy_folder/
-          cp CNAME deploy_folder/
 
-      - name: Deploy to GitHub Pages
+      - name: Publish generated site to build branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
